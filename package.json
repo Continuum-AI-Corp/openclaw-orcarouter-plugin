@@ -1,0 +1,52 @@
+{
+  "name": "@continuum-ai-corp/openclaw-orcarouter",
+  "version": "0.1.0",
+  "description": "OrcaRouter provider plugin for OpenClaw — adaptive routing across many LLMs through a single OpenAI-compatible API.",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/Continuum-AI-Corp/openclaw-orcarouter-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Continuum-AI-Corp/openclaw-orcarouter-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Continuum-AI-Corp/openclaw-orcarouter-plugin/issues"
+  },
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "orcarouter",
+    "llm",
+    "provider"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "tsc -p tsconfig.build.json",
+    "test": "vitest run tests/index.test.ts",
+    "test:live": "vitest run tests/orcarouter.live.test.ts"
+  },
+  "files": [
+    "dist/",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "openclaw": {
+    "extensions": ["./dist/index.js"],
+    "compat": {
+      "pluginApi": ">=2026.5.12",
+      "minGatewayVersion": "2026.5.12"
+    },
+    "build": {
+      "openclawVersion": "2026.5.12",
+      "pluginSdkVersion": "2026.5.12"
+    }
+  },
+  "devDependencies": {
+    "openclaw": "^2026.5.12",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "openai": "^4.68.0"
+  }
+}

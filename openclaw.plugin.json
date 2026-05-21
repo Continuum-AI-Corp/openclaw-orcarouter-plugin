@@ -1,0 +1,49 @@
+{
+  "id": "orcarouter",
+  "name": "OrcaRouter Provider",
+  "description": "OrcaRouter - adaptive routing across many LLMs through a single OpenAI-compatible API.",
+  "activation": {
+    "onStartup": false
+  },
+  "providers": ["orcarouter"],
+  "modelSupport": {
+    "modelPrefixes": ["orcarouter/"]
+  },
+  "modelIdNormalization": {
+    "providers": {
+      "orcarouter": {
+        "prefixWhenBare": "orcarouter"
+      }
+    }
+  },
+  "setup": {
+    "providers": [
+      {
+        "id": "orcarouter",
+        "authMethods": ["api-key"],
+        "envVars": ["ORCAROUTER_API_KEY"]
+      }
+    ]
+  },
+  "providerAuthChoices": [
+    {
+      "provider": "orcarouter",
+      "method": "api-key",
+      "choiceId": "orcarouter-api-key",
+      "choiceLabel": "OrcaRouter API key",
+      "groupId": "orcarouter",
+      "groupLabel": "OrcaRouter",
+      "groupHint": "API key",
+      "onboardingScopes": ["text-inference"],
+      "optionKey": "orcarouterApiKey",
+      "cliFlag": "--orcarouter-api-key",
+      "cliOption": "--orcarouter-api-key <key>",
+      "cliDescription": "OrcaRouter API key"
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
