@@ -1,4 +1,4 @@
-# @orcarouter/openclaw-provider
+# @continuum-ai-corp/openclaw-orcarouter
 
 OrcaRouter provider plugin for [OpenClaw](https://github.com/openclaw/openclaw) — adaptive routing across many LLMs through a single OpenAI-compatible API (`https://api.orcarouter.ai/v1`).
 
@@ -6,12 +6,12 @@ OrcaRouter provider plugin for [OpenClaw](https://github.com/openclaw/openclaw) 
 
 ## Install
 
-Requires OpenClaw `2026.5.17` or newer (Node ≥ 22).
+Requires OpenClaw `2026.5.12` or newer (Node ≥ 22).
 
 ```bash
-openclaw plugins install clawhub:@orcarouter/openclaw-provider
+openclaw plugins install clawhub:@continuum-ai-corp/openclaw-orcarouter
 # or, during launch cutover, from npm directly:
-openclaw plugins install @orcarouter/openclaw-provider
+openclaw plugins install @continuum-ai-corp/openclaw-orcarouter
 ```
 
 ## Configure
